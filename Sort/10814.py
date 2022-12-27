@@ -1,7 +1,7 @@
 N = int(input())
-coordinate = []
+member = []
 for i in range(N):
-    coordinate.append(list(map(str,input().split())))
-coordinate.sort(key=lambda x:(int(x[0])))
+    member.append(list(map(str,input().split())))
+member.sort(key=lambda x:(int(x[0])))
 for i in range(N):
-    print(coordinate[i][0],coordinate[i][1])
+    print(member[i][0],member[i][1])
