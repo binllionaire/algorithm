@@ -27,7 +27,7 @@ def continent_division(graph,x,y,label):
 def bridge(label):
     dx = [-1,1,0,0]
     dy = [0,0,-1,1]
-    
+    distance = [[0]* N for _ in range(N)]
     queue = deque()
     for i in range(N):
         for j in range(N):
@@ -37,7 +37,7 @@ def bridge(label):
     while queue:
         global answer
         x,y = queue.popleft()
-
+        
         for i in range(4):
             nx = x + dx[i]
             ny = y + dy[i]
@@ -56,7 +56,7 @@ def bridge(label):
 N = int(input())
 # 대륙분류하기
 graph = [list(map(int, input().split())) for _ in range(N)]
-distance = [[0]* N for _ in range(N)]
+
 label = 1
 answer = sys.maxsize
 for i in range(N):
